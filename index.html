@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <title>Visit Clare</title>
+        <link href ="CSS/clare.css" rel ="stylesheet">
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myNav");
+                if (x.className === "nav-bar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav-bar";
+                }
+            }
+        </script>
+	</head>
+
+	<body>
+		<div class="hero">
+            <nav class="nav-bar" id="myNav">
+                <ul class="hamburger">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Accommodation</a></li>
+                    <li><a href="#">Plan your trip</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i></a></li>
+                </ul>
+            </nav>
+            <span class="hero-text">Start <br>your<br> adventure</span>
+            <div class="scroll-button">
+                <a href="#main">LOCATIONS
+                    <img src="images/semi-circle.png" class="semi-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-bar-down" width="36" height="36" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="12" y1="20" x2="12" y2="10" />
+                        <line x1="12" y1="20" x2="16" y2="16" />
+                        <line x1="12" y1="20" x2="8" y2="16" />
+                        <line x1="4" y1="4" x2="20" y2="4" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="black-bar"></div>
+        <div class="main" id="main">
+            <div class="locations space">
+                <h1>Locations</h1>
+                <div class="grid-container">
+                    <section class="tile location">
+                        <img src="images/burren.jpg" alt="Man standing in an exposed limestone landscape in the Burren" class="tile-image">
+                        <!-- Photo by Tommy Bond: https://unsplash.com/photos/fM3e6-eO4r8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash -->
+                        <div class="text-wrapper">
+                        <h2>Explore the Unique Landscape of the Burren</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit purus id metus semper, sed venenatis nisl convallis. Maecenas fringilla tortor nec augue placerat, at dictum tortor fringilla.</p>
+                        </div>
+                    </section>
+
+                    <section class="tile location">
+                        <img src="images/surfing.jpg" alt="Surfer surfing a wave in Lahinch" class="tile-image">
+                        <!-- Photo by Max Ravier: https://www.pexels.com/photo/a-person-surfing-on-the-sea-5873907/ -->
+                        <div class="text-wrapper">
+                        <h2>Enjoy world class surfing in Lahinch</h2>
+                        <p>Located in Liscannor Bay on Clare's Atlantic coast, Lahinch's geography makes it an ideal location for surfing and other watersports.</p>
+                        </div>
+                    </section>
+
+                    <section class="tile location">
+                        <img src="images/caves.jpg" alt="Stalagmites and stalactites in a cave" class="tile-image">
+                        <!-- Photo by Francesco Ungaro: https://www.pexels.com/photo/stalagmites-and-stalactites-in-grotto-12553121/ -->
+                        <div class="text-wrapper">
+                        <h2>Be amazed by the natural beauty of the Aillwee Caves</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit purus id metus semper, sed venenatis nisl convallis. Maecenas fringilla tortor nec augue placerat, at dictum tortor fringilla.</p>
+                        </div>
+                    </section>
+
+                    <section class="tile location">
+                        <iframe src="https://www.youtube.com/embed/pgIjRB-L8OY" class="tile-image">
+                        </iframe>
+                        <!-- Photo by Kelly: https://www.pexels.com/photo/aerial-photography-of-rock-next-to-water-body-2382681/ -->
+                        <div class="text-wrapper">
+                        <h2>See the breathtaking views at the famous Cliffs of Moher</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit purus id metus semper, sed venenatis nisl convallis. Maecenas fringilla tortor nec augue placerat, at dictum tortor fringilla.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="sign-up space">
+                <p>Sign up for our monthly newsletter and get the lastest on events and activities in Clare!</p>
+                <a href="contactUs.html" class="button">Sign up</a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="contact footer-div">
+                <h2>Contact Us</h2>
+                <address>
+                Website by Haven McGuire. <br>
+                Email: <a href="mailto:K00288312@student.lit.ie">K00288312@student.lit.ie</a>
+                </address>
+            </div>
+            <div class="more-info footer-div">
+                <h2>More Info</h2>
+                <ul>
+                    <li><a href="">Link1</a></li>
+                    <li><a href="">Link1</a></li>
+                    <li><a href="">Link1</a></li>
+                </ul>
+            </div>
+            <div class="social-media footer-div">
+                <h2>Find us on social media</h2>
+                <ul>
+                    <li><a href="">Link1</a></li>
+                    <li><a href="">Link1</a></li>
+                    <li><a href="">Link1</a></li>
+                </ul>
+            </div>
+        </footer>
+	</body>
+</html>

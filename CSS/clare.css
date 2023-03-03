@@ -1,0 +1,365 @@
+
+/* Base Styles ------------------------------------------------------------------------------*/
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { /* This is tag selector 1*/
+    background-image: url(../images/background-1.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    
+}
+
+.hero { /* This is class selector 1*/
+    font-family: 'Amarante';
+    background-image: url(../images/hero.jpg);
+    /*  Photo by Bhargava Marripati: https://www.pexels.com/photo/photo-of-seaside-during-dawn-4055520/  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 100vh;
+}
+
+.nav-bar { /* This is class selector 2*/
+    background-image: linear-gradient(rgba(0,0,0,1) 17px, rgba(0,0,0,0));
+    height: 60px;
+    color: white;
+}
+
+.nav-bar ul { /* This is compound selector 1 */
+    text-align: right;
+    list-style: none;
+    font-size: 1.2em;
+    padding-top: 2px; /* This is an example of padding */
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.nav-bar li { /* This is compound selector 2 */
+    font-size: 1.5em;
+    flex: 1fr;
+}
+
+nav, footer {} /* This is group selector 1 */
+h1, h2 {} /* This is group selector 2 */
+#firstname {} /* This is id selector 1 */
+#lastname {} /* This is id selector 2 */
+
+.nav-bar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-text {
+    color: white;
+    font-family: "Tilt Prism";
+    font-size: 4.2em;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+}
+
+.scroll-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.semi-circle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+    height: 5.4em;
+    border-top-left-radius: 10em;
+    border-top-right-radius: 10em;
+}
+
+.scroll-button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 50%; /* This is an example of margin */
+}
+
+.icon-tabler-arrow-bar-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -7%);
+}
+
+.black-bar {
+    background-image: linear-gradient(rgba(0,0,0,1) 5px, rgba(0,0,0,0));
+    height: 20px;
+}
+
+.space {
+    margin-bottom: 5em;
+}
+
+.main {
+    width: 100vw;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 3em;
+}
+
+.main h1 {
+    margin-top: 2em;
+    margin-bottom: 0.3em;
+    text-align: center;
+    font-size: 2.7em;
+    background-image: radial-gradient(rgba(0,0,0,1) 25%, rgba(0,0,0,0) 60%);
+    padding: 0.5em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3em;
+    border-radius: 5px;
+}
+
+.tile {
+    grid-column: 1/-1;
+    background-color: white;
+    border: 2px solid white; /* This is an example of borders */
+    border-radius: 40px;
+    overflow: hidden;
+    color: black;
+    font-family: sans-serif;
+    text-align: left;
+}
+
+.tile-image {
+    width: 100%;
+    height: 28vh;
+    object-fit: cover;
+}
+
+.tile .text-wrapper {
+    padding: 0.7em;
+    padding-bottom: 2em;
+}
+
+.tile .text-wrapper h2 {
+    margin-bottom: 0.3em;
+    font-size: 1.3em;
+}
+
+.sign-up {
+        background-image: radial-gradient(rgba(0,0,0,1) 20%, rgba(0,0,0,0) 80%);
+    padding: 2em 0;
+}
+
+.sign-up p {
+    margin-bottom: 1em;
+}
+
+.button {
+    border: 4px solid white;
+    border-radius: 50px;
+    font-weight: normal;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    padding: .1em .8em;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+a.button {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer { /* This is tag selector 2 */
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2em;
+    grid-gap: 10%;
+    text-align: left;
+    justify-items: left;
+}
+
+.footer-div a {
+    color: white;
+}
+
+/* Hamburger */
+.nav-bar .icon {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.nav-bar a {display: none;}
+	.nav-bar a.icon {
+	display: block;
+	}
+	
+	.nav-bar.responsive {position: relative;}
+	.nav-bar.responsive a.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.nav-bar.responsive a {
+		float: none;
+		display: block;
+		text-align: right;
+	}
+    .nav-bar.responsive a:not(.icon) {
+        background-color: black;
+        padding: 0.1em 0.3em;
+	}
+    .nav-bar.responsive ul li:nth-child(1) {
+        padding-top: 1em;
+        background-color: black;
+	}
+}
+
+/* End of base styles -----------------------------------------------------------------------*/
+
+/* Form ------------------------------------------------------------------------------------ */
+
+body {
+    background-color: black;
+}
+
+.form-container {
+    display: flex;
+    padding-top: 5%;
+}
+
+form {
+    background-color: gray;
+    padding: 2em;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 6em;
+    
+    --labelw: 6em;
+    --inputw: 8em;
+    --colgap: 1.3em;
+    --rowgap: 0.6em;
+}
+
+fieldset {
+    padding: 1.5em 1em;
+    display: grid;
+    width: ;
+    grid-template-columns: var(--labelw) var(--inputw);
+    grid-gap: var(--rowgap) var(--colgap);
+}
+
+legend {
+    font-weight: bold;
+    font-style: italic;
+}
+
+form .left-col {
+    grid-column-start: 1;
+    text-align: right;
+    justify-self: end;
+}
+
+form .right-col {
+    grid-column-start: 2;
+    text-align: left;
+    align-self: center;
+}
+
+form .all-col {
+    grid-column: 1/-1;
+}
+
+fieldset > fieldset {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0.5em;
+    margin: 0;
+    width: 100%;
+    grid-template-columns: calc(50% - var(--colgap) / 2) calc(50% - var(--colgap) / 2);
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+/* Tablet View */
+@media only screen and (min-width:641px) {
+    .hero-text {
+        font-size: 7em;
+    }
+    .grid-container {
+        grid-template-columns: repeat(12,1fr);
+    }
+    .tile {
+        grid-column: span 6;
+    }
+    
+    form {
+        background-color: gray;
+        padding: 2em;
+        border-radius: 20px;
+
+        margin: auto;
+        --labelw: 6em;
+        --inputw: 12em;
+        --colgap: 1.3em;
+        --rowgap: 0.6em;
+    }
+    
+    footer {
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 2em;
+        grid-gap: 10%;
+        text-align: left;
+        justify-items: center;
+    }
+    
+    .nav-bar ul { /* This is compound selector 1 */
+        text-align: center;
+        list-style: none;
+        font-size: 1.2em;
+        padding-top: 2px; /* This is an example of padding */
+        display: flex;
+        gap: 8%;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .nav-bar li { font-size: 1em; }
+}
+
+/* Desktop view */
+@media only screen and (min-width:1008px) {
+    
+    
+}
+
+
+
